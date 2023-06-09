@@ -1,0 +1,59 @@
+@use "../../../../assets/scss/variables" as v;
+@use "../../../../assets/scss/mixins" as m;
+
+.header {
+  nav.navbar {
+    button {
+      box-shadow: none;
+    }
+
+    .navbar-collapse {
+      @media (max-width: 992px) {
+        background-color: v.$color4;
+        transition: all 0.5s;
+      }
+
+      .navbar-nav {
+        a {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          padding: 0;
+          padding-right: 4rem;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+
+      .icons {
+        @include m.flexbox(row, center, center);
+
+        @media (max-width: 992px) {
+          @include m.flexbox(row, flex-start);
+        }
+
+        a {
+          padding-right: 1rem;
+
+          @media (max-width: 992px) {
+            padding-right: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+
+        svg {
+          background-color: v.$color2;
+          padding: 1.5px;
+          color: v.$color3;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
