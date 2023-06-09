@@ -141,6 +141,7 @@
             td {
               height: 65px;
               padding: 21px 52px;
+              border-color: v.$color6;
 
               .dx-datagrid-text-content {
                 font-weight: 500;
@@ -176,6 +177,7 @@
             }
 
             td {
+              border-color: v.$color6;
               padding: 33px 57px;
               height: 65px;
               font-weight: 400;
